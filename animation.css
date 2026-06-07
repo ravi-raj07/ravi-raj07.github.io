@@ -1,0 +1,424 @@
+/* ==========================
+   LOADER ANIMATION
+========================== */
+
+.loading-line{
+    position:relative;
+}
+
+.loading-line::before{
+
+    animation:
+    loadingBar 2s ease forwards;
+}
+
+@keyframes loadingBar{
+
+    from{
+        transform:translateX(-100%);
+    }
+
+    to{
+        transform:translateX(0%);
+    }
+}
+
+/* ==========================
+   AURORA BACKGROUND
+========================== */
+
+.aurora{
+
+    animation:
+    auroraMove 15s ease-in-out infinite alternate;
+}
+
+@keyframes auroraMove{
+
+    0%{
+
+        transform:
+        translate(-50px,-30px)
+        scale(1);
+    }
+
+    50%{
+
+        transform:
+        translate(40px,20px)
+        scale(1.15);
+    }
+
+    100%{
+
+        transform:
+        translate(-30px,40px)
+        scale(1);
+    }
+}
+
+/* ==========================
+   HERO TITLE GLOW
+========================== */
+
+.hero-content h1{
+
+    animation:
+    glowText 3s infinite alternate;
+}
+
+@keyframes glowText{
+
+    from{
+
+        filter:
+        drop-shadow(0 0 10px #00e5ff);
+    }
+
+    to{
+
+        filter:
+        drop-shadow(0 0 35px #7c3aed);
+    }
+}
+
+/* ==========================
+   HERO CONTENT ENTRY
+========================== */
+
+.hero-content{
+
+    animation:
+    heroReveal 1.4s ease;
+}
+
+@keyframes heroReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(80px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
+
+/* ==========================
+   BUTTON FLOAT
+========================== */
+
+.btn{
+
+    animation:
+    buttonFloat 4s ease-in-out infinite;
+}
+
+@keyframes buttonFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+   NAVBAR APPEAR
+========================== */
+
+nav{
+
+    animation:
+    navDrop 1s ease;
+}
+
+@keyframes navDrop{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,-100px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translate(-50%,0);
+    }
+}
+
+/* ==========================
+   SECTION TITLE GLOW
+========================== */
+
+.section-title{
+
+    animation:
+    titlePulse 4s infinite;
+}
+
+@keyframes titlePulse{
+
+    0%{
+
+        text-shadow:
+        0 0 10px rgba(0,229,255,.2);
+    }
+
+    50%{
+
+        text-shadow:
+        0 0 40px rgba(0,229,255,.7);
+    }
+
+    100%{
+
+        text-shadow:
+        0 0 10px rgba(0,229,255,.2);
+    }
+}
+
+/* ==========================
+   ABOUT CARD FLOAT
+========================== */
+
+.about-card{
+
+    animation:
+    cardFloat 6s ease-in-out infinite;
+}
+
+@keyframes cardFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+   SKILL CARD HOVER
+========================== */
+
+.skill-card:hover{
+
+    animation:
+    skillGlow .8s ease forwards;
+}
+
+@keyframes skillGlow{
+
+    from{
+
+        box-shadow:
+        0 0 0 rgba(0,229,255,0);
+    }
+
+    to{
+
+        box-shadow:
+        0 0 40px rgba(0,229,255,.5);
+    }
+}
+
+/* ==========================
+   PROJECT CARD EFFECT
+========================== */
+
+.project-card{
+
+    transition:
+    transform .5s ease,
+    box-shadow .5s ease;
+}
+
+.project-card:hover{
+
+    transform:
+    perspective(1000px)
+    rotateX(6deg)
+    rotateY(-6deg)
+    translateY(-12px);
+
+    box-shadow:
+    0 0 45px rgba(0,229,255,.25);
+}
+
+/* ==========================
+   CONTACT CARD GLOW
+========================== */
+
+.contact-card:hover{
+
+    animation:
+    contactGlow 1s forwards;
+}
+
+@keyframes contactGlow{
+
+    to{
+
+        box-shadow:
+        0 0 35px rgba(124,58,237,.45);
+    }
+}
+
+/* ==========================
+   SCROLL INDICATOR
+========================== */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    animation:
+    bounceArrow 1.5s infinite;
+}
+
+@keyframes bounceArrow{
+
+    0%,100%{
+
+        transform:
+        translate(-50%,0);
+    }
+
+    50%{
+
+        transform:
+        translate(-50%,12px);
+    }
+}
+
+/* ==========================
+   FLOATING SHAPES
+========================== */
+
+.shape{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(5px);
+
+    opacity:.3;
+
+    animation:
+    floatShape 15s linear infinite;
+}
+
+.shape1{
+
+    width:150px;
+    height:150px;
+
+    background:#00e5ff;
+
+    top:10%;
+    left:5%;
+}
+
+.shape2{
+
+    width:250px;
+    height:250px;
+
+    background:#7c3aed;
+
+    bottom:10%;
+    right:5%;
+}
+
+.shape3{
+
+    width:180px;
+    height:180px;
+
+    background:#00ffb3;
+
+    top:50%;
+    right:20%;
+}
+
+@keyframes floatShape{
+
+    0%{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+    }
+
+    50%{
+
+        transform:
+        translateY(-50px)
+        rotate(180deg);
+    }
+
+    100%{
+
+        transform:
+        translateY(0)
+        rotate(360deg);
+    }
+}
+
+/* ==========================
+   FADE IN
+========================== */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:
+    translateY(60px);
+
+    transition:
+    .8s ease;
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+}
